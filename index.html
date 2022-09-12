@@ -1,0 +1,13 @@
+pipeline {  
+		
+		agent {label 'built-in'}
+		
+		stages {
+		stage ('stage-1'){
+		steps{
+			sh"yum install git -y"
+			sh "yum install httpd -y "
+			sh "service httpd stop "
+			sh "service httpd restart "
+}}}
+}
